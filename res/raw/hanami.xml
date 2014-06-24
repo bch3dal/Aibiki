@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gida_u notation="研精会譜" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="./format.xsd">
+
+	<ヘッダ>
+		<曲名>元禄風花見踊</曲名>
+		<曲名カナ>ゲンロクフウハナミオドリ</曲名カナ>
+		<作曲者>三代目杵屋正治郎</作曲者>
+		<初演年>明治11年</初演年>
+		<演了時間>18</演了時間>
+		<調弦定義>
+			<調弦 name="二上り">
+				<音程差 type="半音" from="一" to="二">7</音程差>
+				<音程差 type="半音" from="一" to="三">12</音程差>
+			</調弦>
+		</調弦定義>
+	</ヘッダ>
+
+	<頭出し定義>
+		<頭 id="0">前弾</頭>
+		<頭 id="1">吾妻路を</頭>
+		<頭 id="2">みやこの春に志賀山の</頭>
+		<頭 id="3">派手を構はぬ伊達染や</頭>
+		<頭 id="4">連て着つれて行く袖も</頭>
+		<頭 id="5">たんだふれふれ六尺袖の</頭>
+		<頭 id="6">裾に八つ橋染ても見たが</頭>
+		<頭 id="7">手先揃へてざざんざの</頭>
+		<頭 id="8">花と月とはどれが都の</頭>
+		<頭 id="9">二条どほりの百足屋が</頭>
+		<頭 id="10">疋田鹿の子の小袖幕</頭>
+		<頭 id="11">目にも綾ある小袖の主の</頭>
+		<頭 id="12">ヤンレソンレはへ</頭>
+		<頭 id="13">花見するとて熊谷傘よ</頭>
+		<頭 id="14">月に兎は和田酒盛の</頭>
+		<頭 id="15">腰に瓢箪毛巾着</頭>
+		<頭 id="16">よいよいやさ</頭>
+		<頭 id="17">合方</頭>
+		<頭 id="18">武蔵名物月のよい晩は</頭>
+		<頭 id="19">をかた鉢巻蝙蝠羽織</頭>
+		<頭 id="20">無反角鍔角内連れて</頭>
+		<頭 id="21">布搗く杵も小町踊りの</頭>
+		<頭 id="22">よいよいよいよいよいやさ</頭>
+		<頭 id="23">入来る入来る桜どき</頭>
+		<頭 id="24">渡り拍子の合方</頭>
+		<頭 id="25">賑はしかりける次第なり</頭>
+	</頭出し定義>
+
+	<楽譜>
+		<三味線>
+			<小節 id="0">
+				<頭 id="0"/>
+				<調弦 name="二上り"/>
+				<速度>140</速度>
+				<休符 underLine="1"/>
+				<音符 underLine="2" string="3" position="1" kuchi="チ"/>
+				<音符 underLine="2" string="3" position="1" kuchi="ヽ"/>
+				<音符 underLine="1" string="3" position="1" kuchi="チン"/>
+				<音符 underLine="1" string="3" position="1" kuchi="ヽ"/>
+			</小節>
+			<小節 id="1">
+				<音符 underLine="1" string="3" position="1" kuchi="チン"/>
+				<音符 underLine="1" string="3" position="1" kuchi="ヽ"/>
+				<音符 underLine="1" string="3" position="1" kuchi="ヽ"/>
+				<音符 underLine="1" string="3" position="1" kuchi="ヽ"/>
+			</小節>
+			<小節 id="2">
+				<音符 underLine="1" string="3" position="1" kuchi="チン"/>
+				<音符 underLine="1" string="3" position="1" kuchi="ヽ"/>
+				<音符 underLine="1" string="3" position="1" kuchi="ヽ"/>
+				<音符 underLine="1" string="3" position="1" kuchi="ヽ"/>
+			</小節>
+			<小節 id="3">
+				<音符 underLine="1" string="3" position="1" kuchi="チン"/>
+				<音符 underLine="1" string="3" position="1" kuchi="ヽ"/>
+				<音符 underLine="1" string="3" position="0" kuchi="テン"/>
+				<音符 underLine="1" string="2" position="3" kuchi="ツン"/>
+			</小節>
+			<小節 id="4">
+				<音符 underLine="1" string="1" position="0" kuchi="ドン"/>
+				<伸ばし underLine="2"/>
+				<音符 underLine="2" string="3" position="5" kuchi="チ"/>
+				<音符 underLine="1" string="3" position="5" kuchi="チン"/>
+				<音符 underLine="1" string="3" position="5" kuchi="ヽ"/>
+			</小節>
+			<小節 id="5">
+				<音符 underLine="1" string="3" position="5" kuchi="チン"/>
+				<音符 underLine="1" string="3" position="5" kuchi="ヽ"/>
+				<音符 underLine="1" string="3" position="7" kuchi="チン">
+					<記号 finger="三"/>
+				</音符>
+				<音符 underLine="1" string="3" position="5" kuchi="チン"/>
+			</小節>
+			<小節 id="6">
+				<速度>120</速度>
+				<音符 underLine="1" string="2" position="0" kuchi="トン"/>
+				<伸ばし underLine="2"/>
+				<音符 underLine="2" string="3" position="8" kuchi="チ">
+					<記号 finger="二"/>
+				</音符>
+				<音符 underLine="1" string="3" position="8" kuchi="チン">
+					<記号 finger="二"/>
+				</音符>
+				<音符 underLine="1" string="3" position="8" kuchi="ヽ">
+					<記号 finger="二"/>
+				</音符>
+			</小節>
+			<小節 id="7">
+				<速度>80</速度>
+				<音符 underLine="1" string="3" position="8" kuchi="チン">
+					<記号 finger="二"/>
+				</音符>
+				<音符 underLine="1" string="3" position="8" kuchi="ヽ">
+					<記号 finger="二"/>
+				</音符>
+				<音符 string="3" position="8" kuchi="ヽ">
+					<記号 finger="二"/>
+				</音符>
+			</小節>
+			<小節 id="8">
+				<速度>50</速度>
+				<音符 underLine="1" string="3" position="12" kuchi="チン">
+					<記号 finger="二"/>
+				</音符>
+				<音符 underLine="1" string="3" position="8" kuchi="チン">
+					<記号 finger="二"/>
+				</音符>
+				<音符 underLine="1" string="2" position="0" kuchi="ト"/>
+				<音符 underLine="1" string="3" position="7" kuchi="チ"/>
+			</小節>
+			<小節 id="9">
+				<速度>90</速度>
+				<音符 underLine="1" string="3" position="7" kuchi="チ"/>
+				<音符 underLine="1" string="3" position="7" kuchi="リ">
+					<記号 option="スクイ"/>
+				</音符>
+				<音符 underLine="1" string="3" position="7" kuchi="チ"/>
+				<音符 underLine="1" string="3" position="7" kuchi="リ">
+					<記号 option="スクイ"/>
+				</音符>
+			</小節>
+			<小節 id="10">
+				<速度>110</速度>
+				<音符 underLine="1" string="3" position="8" kuchi="チ">
+					<記号 finger="二"/>
+				</音符>
+				<音符 underLine="1" string="3" position="12" kuchi="チ">
+					<記号 finger="二"/>
+				</音符>
+				<音符 underLine="1" string="2" position="0" kuchi="ト"/>
+				<音符 underLine="1" string="3" position="7" kuchi="チ"/>
+			</小節>
+			<小節 id="11">
+				<音符 underLine="1" string="3" position="7" kuchi="チ"/>
+				<音符 underLine="1" string="3" position="7" kuchi="リ">
+					<記号 option="スクイ"/>
+				</音符>
+				<音符 underLine="1" string="3" position="7" kuchi="チ"/>
+				<音符 underLine="1" string="3" position="7" kuchi="リン">
+					<記号 option="スクイ"/>
+				</音符>
+			</小節>
+			<小節 id="12">
+				<速度>130</速度>
+				<休符 underLine="1"/>
+				<音符 underLine="1" string="3" position="10" kuchi="チン"/>
+				<音符 underLine="1" string="3" position="12" kuchi="チン"/>
+				<音符 underLine="1" string="3" position="13" kuchi="チン">
+					<記号 finger="二"/>
+				</音符>
+			</小節>
+			<小節 id="13">
+				<音符 underLine="2" string="3" position="12" kuchi="チ"/>
+				<音符 underLine="2" string="3" position="12" kuchi="リ">
+					<記号 option="スクイ"/>
+				</音符>
+				<音符 underLine="2" string="3" position="13" kuchi="チ">
+					<記号 finger="二"/>
+				</音符>
+				<音符 underLine="2" string="3" position="12" kuchi="リ">
+					<記号 option="ハジキ"/>
+				</音符>
+				<音符 string="3" position="8" kuchi="チン">
+					<記号 finger="二"/>
+				</音符>
+			</小節>
+			<小節 id="14">
+				<音符 underLine="2" string="3" position="7" kuchi="チ"/>
+				<音符 underLine="2" string="3" position="7" kuchi="リ">
+					<記号 option="スクイ"/>
+				</音符>
+				<音符 underLine="1" string="3" position="7" kuchi="リン">
+					<記号 option="ハジキ"/>
+				</音符>
+				<音符 underLine="2" string="3" position="5" kuchi="チ"/>
+				<音符 underLine="2" string="3" position="5" kuchi="リ">
+					<記号 option="スクイ"/>
+				</音符>
+				<音符 underLine="1" string="3" position="5" kuchi="リン">
+					<記号 option="ハジキ"/>
+				</音符>
+			</小節>
+			<小節 id="15">
+				<音符 underLine="1" string="3" position="7" kuchi="チン"/>
+				<音符 underLine="2" string="3" position="7" kuchi="チ"/>
+				<音符 underLine="2" string="3" position="7" kuchi="リ">
+					<記号 option="スクイ"/>
+				</音符>
+				<音符 underLine="1" string="3" position="7" kuchi="リン">
+					<記号 option="ハジキ"/>
+				</音符>
+				<休符 underLine="1"/>
+			</小節>
+			<小節 id="16">
+				<音符 underLine="2" string="3" position="7" kuchi="チ"/>
+				<音符 underLine="2" string="3" position="7" kuchi="リ">
+					<記号 option="スクイ"/>
+				</音符>
+				<音符 underLine="1" string="3" position="7" kuchi="リン">
+					<記号 option="ハジキ"/>
+				</音符>
+				<音符 underLine="2" string="3" position="5" kuchi="チ"/>
+				<音符 underLine="2" string="3" position="5" kuchi="リ">
+					<記号 option="スクイ"/>
+				</音符>
+				<音符 underLine="1" string="3" position="5" kuchi="リン">
+					<記号 option="ハジキ"/>
+				</音符>
+			</小節>
+			<小節 id="17">
+				<音符 underLine="1" string="3" position="7" kuchi="チン"/>
+				<音符 underLine="2" string="3" position="7" kuchi="チ"/>
+				<音符 underLine="2" string="3" position="7" kuchi="リ">
+					<記号 option="スクイ"/>
+				</音符>
+				<音符 underLine="1" string="3" position="7" kuchi="リン">
+					<記号 option="ハジキ"/>
+				</音符>
+				<音符 underLine="1" string="3" position="8" kuchi="チン">
+					<記号 finger="二"/>
+				</音符>
+			</小節>
+			<小節 id="18">
+				<音符 underLine="2" string="3" position="5" kuchi="チ"/>
+				<音符 underLine="2" string="3" position="5" kuchi="リ">
+					<記号 option="スクイ"/>
+				</音符>
+				<音符 underLine="2" string="3" position="5" kuchi="チ"/>
+				<音符 underLine="2" string="3" position="5" kuchi="リ">
+					<記号 option="スクイ"/>
+				</音符>
+				<音符 underLine="2" string="3" position="5" kuchi="チ"/>
+				<音符 underLine="2" string="3" position="5" kuchi="リ">
+					<記号 option="スクイ"/>
+				</音符>
+				<音符 underLine="2" string="3" position="5" kuchi="チ"/>
+				<音符 underLine="2" string="3" position="5" kuchi="リ">
+					<記号 option="スクイ"/>
+				</音符>
+			</小節>
+			<小節 id="19">
+				<音符 underLine="2" string="3" position="7" kuchi="チ">
+					<記号 finger="三"/>
+				</音符>
+				<音符 underLine="2" string="3" position="7" kuchi="リ">
+					<記号 finger="三" option="スクイ"/>
+				</音符>
+				<音符 underLine="2" string="3" position="7" kuchi="チ">
+					<記号 finger="三"/>
+				</音符>
+				<音符 underLine="2" string="3" position="5" kuchi="レ">
+					<記号 option="ハジキ"/>
+				</音符>
+				<音符 underLine="1" string="2" position="6" kuchi="ツン">
+					<記号 finger="二"/>
+				</音符>
+				<音符 underLine="1" string="2" position="5" kuchi="ツン">
+					<記号 finger="一"/>
+				</音符>
+			</小節>
+			<小節 id="20">
+				<音符 underLine="1" string="2" position="7" kuchi="ツ">
+					<記号 finger="三"/>
+				</音符>
+				<音符 underLine="1" string="1" position="5" kuchi="ツ">
+					<記号 finger="一"/>
+				</音符>
+				<音符 underLine="1" string="2" position="0" kuchi="テ"/>
+				<音符 underLine="1" string="2" position="3" kuchi="ツ"/>
+			</小節>
+			<小節 id="21">
+				<音符 string="1" position="0" kuchi="ドン"/>
+				<音符 underLine="1" string="3" position="1" kuchi="チ"/>
+				<音符 underLine="1" string="3" position="1" kuchi="リ">
+					<記号 option="ハジキ"/>
+				</音符>
+			</小節>
+			<小節 id="22">
+				<音符 underLine="1" string="3" position="1" kuchi="チ"/>
+				<音符 underLine="1" string="3" position="0" kuchi="テ"/>
+				<音符 underLine="1" string="3" position="0" kuchi="レ">
+					<記号 option="スクイ"/>
+				</音符>
+				<音符 underLine="1" string="2" position="1" kuchi="ツ"/>
+			</小節>
+			<小節 id="23">
+				<音符 underLine="1" string="2" position="0" kuchi="ト"/>
+				<音符 underLine="1" string="1" position="5" kuchi="ツ"/>
+				<音符 underLine="1" string="2" position="0" kuchi="テ"/>
+				<音符 underLine="1" string="2" position="3" kuchi="ツ"/>
+			</小節>
+			<小節 id="24">
+				<速度>70</速度>
+				<音符 string="1" position="0" kuchi="ドン"/>
+				<休符 underLine="1"/>
+				<音符 underLine="1" string="3" position="1" kuchi="チ"/>
+			</小節>
+			<小節 id="25">
+				<音符 string="3" position="1" kuchi="チン"/>
+				<伸ばし/>
+			</小節>
+			<小節 id="26">
+				<重音 kuchi="チャン">
+					<音符 string="2" position="0"/>
+					<音符 string="3" position="0"/>
+				</重音>
+				<伸ばし/>
+			</小節>
+		</三味線>
+		<唄>
+		</唄>
+	</楽譜>
+</gida_u>

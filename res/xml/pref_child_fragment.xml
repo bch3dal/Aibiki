@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<PreferenceCategory android:title="Category1">
+		<CheckBoxPreference android:key="checkbox_preference"
+			android:summary="checkbox Summary"
+			android:title="checkbox title" />
+		<ListPreference  android:key="@string/pKey_displayStyle"
+		    android:defaultValue="0"
+			android:summary="譜の表示形式を変更します"
+			android:title="Display style"
+			android:entries="@array/nStyle"
+			android:entryValues="@array/nStyleV" />
+				
+	</PreferenceCategory>
+
+</PreferenceScreen>

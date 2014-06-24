@@ -1,0 +1,186 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:background="#885522"
+	android:paddingBottom="@dimen/activity_vertical_margin"
+	android:paddingLeft="@dimen/activity_horizontal_margin"
+	android:paddingRight="@dimen/activity_horizontal_margin"
+	android:paddingTop="@dimen/activity_vertical_margin"
+	android:weightSum="1"
+	tools:context="wobniar7.aibiki2.MainActivity$PlaceholderFragment" >
+
+	<TextView
+		android:id="@+id/title"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="top|center"
+		android:layout_weight="0.2"
+		android:text="Aibiki 2"
+		android:textColor="#ffffff"
+		android:textStyle="bold"
+		android:textSize="30sp" />
+
+	<!-- ボタン群 -->
+
+	<GridLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:columnCount="2"
+		android:rowCount="2"
+		android:layout_weight="0.2" >
+
+		<RelativeLayout
+			android:clickable="true"
+			android:id="@+id/newButton"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_column="0"
+			android:layout_gravity="left|top"
+			android:background="@xml/bgcolor_topmenubutton"
+			android:layout_row="0" >
+			<ImageView
+				android:id="@+id/newFileImage"
+				android:contentDescription="newFile"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentTop="true"
+				android:layout_centerHorizontal="true"
+				android:layout_gravity="top|center"
+				android:src="@drawable/newfile" />
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignLeft="@id/newFileImage"
+				android:layout_alignRight="@id/newFileImage"
+				android:layout_alignBottom="@id/newFileImage"
+				android:gravity="center"
+				android:text="新規作成"
+				android:textColor="#ffffff" />
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:clickable="true"
+			android:id="@+id/openButton"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="20dp"
+			android:layout_column="1"
+			android:background="@xml/bgcolor_topmenubutton"
+			android:layout_row="0" >
+			<ImageView
+				android:id="@+id/openFileImage"
+				android:contentDescription="openFile"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentTop="true"
+				android:layout_centerHorizontal="true"
+				android:layout_gravity="top|center"
+				android:src="@drawable/openfile" />
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignLeft="@id/openFileImage"
+				android:layout_alignRight="@id/openFileImage"
+				android:layout_alignBottom="@id/openFileImage"
+				android:gravity="center"
+				android:text="譜面を開く"
+				android:textColor="#ffffff" />
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:clickable="true"
+			android:id="@+id/settingButton"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_column="0"
+			android:layout_marginTop="20dp"
+			android:background="@xml/bgcolor_topmenubutton"
+			android:layout_row="1" >
+			<ImageView
+				android:id="@+id/settingImage"
+				android:contentDescription="setting"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentTop="true"
+				android:layout_centerHorizontal="true"
+				android:layout_gravity="top|center"
+				android:src="@drawable/setting" />
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignLeft="@id/settingImage"
+				android:layout_alignRight="@id/settingImage"
+				android:layout_alignBottom="@id/settingImage"
+				android:gravity="center"
+				android:text="設定"
+				android:textColor="#ffffff" />
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:clickable="true"
+			android:id="@+id/closeButton"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="20dp"
+			android:layout_marginTop="20dp"
+			android:layout_column="1"
+			android:background="@xml/bgcolor_topmenubutton"
+			android:layout_row="1" >
+			<ImageView
+				android:id="@+id/closeImage"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentLeft="true"
+				android:layout_alignParentTop="true"
+				android:contentDescription="close"
+				android:src="@drawable/close" />
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignLeft="@id/closeImage"
+				android:layout_alignRight="@id/closeImage"
+				android:layout_alignBottom="@id/closeImage"
+				android:gravity="center"
+				android:text="終了"
+				android:textColor="#ffffff" />
+		</RelativeLayout>
+	</GridLayout>
+	
+	<TextView
+		android:id="@+id/footer"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:layout_weight="0.3"
+		android:text="bla bla bla."
+		android:textColor="#ffffff"
+		android:textStyle="bold"
+		android:textSize="10sp" />
+		<!-- TextView
+		android:text="   "
+	/>
+	
+	<TextView
+		android:id="@+id/titleMenu"
+		android:text="Aibiki 2"
+		android:textColor="#ffffff"
+		android:textSize="30sp" />
+	<TextView
+		android:id="@+id/titleMenu"
+		android:text="Aibiki 2"
+		android:textColor="#ffffff"
+		android:textSize="30sp" />
+
+	<RelativeLayout
+		android:layout_width="wrap_content" >
+
+		<TextView
+			android:text="新規作成" />
+	</RelativeLayout>
+	-->
+
+	
+</LinearLayout>

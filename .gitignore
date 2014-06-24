@@ -1,0 +1,5 @@
+gen/
+bin/
+res/drawable*/
+res/menu/
+.settings/

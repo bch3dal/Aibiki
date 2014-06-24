@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:element name="gida_u">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="ヘッダ"/>
+				<xsd:element ref="頭出し定義" minOccurs="0"/>
+		
+				<xsd:element name="楽譜">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element ref="三味線"/>
+							<xsd:element ref="唄"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+			<!-- gida_uの属性(譜面タイプ) -->
+			<xsd:attribute name="notation" type="scoreType"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<!-- 曲名、調弦定義以外はなくてもよいが、2つ以上は定義できない。また順番は
+	曲名 -> 順不同5定義 -> 調弦定義である必要がある -->
+	<xsd:element name="ヘッダ">
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="subHeaderType">
+					<xsd:sequence>
+						<xsd:element ref="調弦定義"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="subHeaderType">
+		<xsd:complexContent>
+			<xsd:extension base="subHeaderType2">
+				<xsd:choice minOccurs="0" maxOccurs="5">
+				<xsd:element name="曲名カナ" type="xsd:string"/>
+				<xsd:element name="作曲者" type="xsd:string"/>
+				<xsd:element name="作詞者" type="xsd:string"/>
+				<xsd:element name="初演年" type="xsd:string"/>
+				<xsd:element name="演了時間" type="xsd:unsignedByte"/>
+				</xsd:choice>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="subHeaderType2">
+		<xsd:sequence>
+			<xsd:element name="曲名" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+
+	<!-- 頭出し定義、max255まで -->
+	<xsd:element name="頭出し定義">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="頭" minOccurs="0" maxOccurs="255">
+					<xsd:complexType>
+						<xsd:simpleContent>
+							<xsd:extension base="xsd:string">
+								<xsd:attribute name="id" type="xsd:unsignedByte"/>
+							</xsd:extension>
+						</xsd:simpleContent>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="調弦定義">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="調弦" maxOccurs="10">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="音程差" minOccurs="2" maxOccurs="2">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:unsignedByte">
+											<xsd:attribute name="type" type="tuneStep"/>
+											<xsd:attribute name="from" type="strFing"/>
+											<xsd:attribute name="to" type="strFing"/>
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+						<xsd:attribute name="name" type="tuning"/>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<!-- 三味線要素、小節の集合体 -->
+	<xsd:element name="三味線">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="小節" minOccurs="0" maxOccurs="unbounded">
+					<xsd:complexType>
+						<xsd:choice minOccurs="0" maxOccurs="unbounded">
+							<xsd:element name="頭" minOccurs="0">
+								<xsd:complexType>
+									<xsd:attribute name="id" type="xsd:unsignedByte"/>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="調弦" minOccurs="0">
+								<xsd:complexType>
+									<xsd:attribute name="name" type="xsd:string"/>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="速度" type="xsd:unsignedByte"/>
+							<xsd:element name="音符" type="note_shamisen"/>
+							<xsd:element name="休符"/>
+							<xsd:element name="伸ばし"/>
+							<xsd:element name="重音"/>
+						</xsd:choice>
+						<xsd:attribute name="id" type="xsd:unsignedByte"/>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<!-- 唄要素、文句の集合体 -->
+	<xsd:element name="唄">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="文句" minOccurs="0" maxOccurs="unbounded">
+					<xsd:complexType>
+						<xsd:choice minOccurs="0" maxOccurs="unbounded">
+							<xsd:element name="詞章" type="xsd:string"/>
+							<xsd:element name="音符" type="note_uta"/>
+						</xsd:choice>
+						<xsd:attribute name="id" type="xsd:unsignedByte"/>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<!-- データ型 -->
+	<xsd:simpleType name="tuning">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="本調子"/>
+			<xsd:enumeration value="二上り"/>
+			<xsd:enumeration value="三下り"/>
+			<xsd:enumeration value="一下り"/>
+			<xsd:enumeration value="六下り"/>
+			<xsd:enumeration value="三メリ"/>
+			<xsd:enumeration value="変調子"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="scoreType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="研精会譜"/>
+			<xsd:enumeration value="文化譜"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="tuneStep">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="半音"/>
+			<xsd:enumeration value="度"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<!-- 三味線の音符 -->
+	<xsd:complexType name="note_shamisen">
+		<xsd:choice minOccurs="0">
+			<xsd:element name="記号">
+				<xsd:complexType>
+					<xsd:attribute name="finger" type="strFing" use="optional"/>
+					<xsd:attribute name="option" type="playOpt" use="optional"/>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:choice>
+		<xsd:attribute name="underLine" type="xsd:unsignedByte" use="optional"/>
+		<xsd:attribute name="string" type="xsd:unsignedByte" use="required"/>
+		<xsd:attribute name="position" type="xsd:unsignedByte" use="required"/>
+		<xsd:attribute name="kuchi" type="xsd:string" use="optional"/>
+	</xsd:complexType>
+
+	<!-- 唄の音符 -->
+	<xsd:complexType name="note_uta">
+		<xsd:choice minOccurs="0" maxOccurs="2">
+			<xsd:element name="位置">
+				<xsd:complexType>
+					<xsd:attribute name="fromM" type="xsd:unsignedByte" use="required"/>
+					<xsd:attribute name="fromP" type="xsd:unsignedByte" use="optional"/>
+					<xsd:attribute name="toM" type="xsd:unsignedByte" use="optional"/>
+					<xsd:attribute name="toP" type="xsd:unsignedByte" use="optional"/>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="カナ" type="xsd:string"/>
+		</xsd:choice>
+		<xsd:attribute name="string" type="xsd:unsignedByte" use="required"/>
+		<xsd:attribute name="position" type="xsd:unsignedByte" use="required"/>
+	</xsd:complexType>
+
+
+	<xsd:simpleType name="strFing">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="一"/>
+			<xsd:enumeration value="二"/>
+			<xsd:enumeration value="三"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="playOpt">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="スクイ"/>
+			<xsd:enumeration value="ハジキ"/>
+			<xsd:enumeration value="ウチ"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+</xsd:schema>
